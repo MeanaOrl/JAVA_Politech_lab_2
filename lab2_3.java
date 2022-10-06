@@ -15,13 +15,13 @@ public class lab2_3 {
         }
         if (z >= 35000 && z <= 100000) {
             if (z > 50000) {
-                System.out.println(z/100 * 30);
+                System.out.println(z/100*30);
             } else {
-                System.out.println(z/100 *25);
+                System.out.println(z/100*25);
             }
         }
         if (z > 100000) {
-            System.out.println(z/100 *40);
+            System.out.println(z/100*40);
         }
     }
 
