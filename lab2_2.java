@@ -5,31 +5,32 @@ public class lab2_2 {
         Scanner w = new Scanner(System.in);
         System.out.println("? вперёд или назад ");
         String a;
-        a = w.nextLine(); 
+        a = w.nextLine();
         System.out.println("Число ячеек: ");
         int b = w.nextInt();
         System.out.println("Позиция: ");
         int c = w.nextInt();
 
-        rob(a, b, c);
+        System.out.println(rob(a, b, c));
     }
 
-    public static void rob(String c, int tab, int poz) {
-        if ((c.equals("вперёд")) == true) {
+    static int rob(String c, int tab, int poz) {
+        if (c.equals("вперёд")) {
             int f = (poz + tab);
             if (f > 99) {
-                System.out.println("99");
+                return 99;
             } else {
-                System.out.println(f);
+                return f;
             }
         }
-        if ((c.equals("назад")) == true) {
+        if (c.equals("назад")) {
             int f = (poz - tab);
             if (f < 0) {
-                System.out.println("0");
+                return 0;
             } else {
-                System.out.println(f);
+                return f;
             }
         }
+        return tab;
     }
 }
